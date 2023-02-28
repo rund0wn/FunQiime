@@ -1,0 +1,15 @@
+## Illumina NovaSeq Data
+
+qiime tools import \
+        --type 'SampleData[PairedEndSequencesWithQuality]' \
+        --input-path ${1} \
+        --output-path ${2} \
+        --input-format PairedEndFastqManifestPhred33V2
+
+## Illumina MiSeq Data
+
+qiime tools import \
+
+
+${1} Manifest.txt
+${2} name.qza
