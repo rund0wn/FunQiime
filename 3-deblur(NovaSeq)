@@ -1,0 +1,14 @@
+qiime deblur denoise-16S \
+        --i-demultiplexed-seqs ${1} \
+        --p-trim-length x \
+        --p-sample-stats \
+        --o-representative-sequences ${2} \
+        --o-table ${3} \
+        --o-stats ${4} \
+        --p-jobs-to-start y \
+        --verbose
+        
+${1} demultiplexed merged seqs
+${2} output name
+x length of sequence to trim to
+y if running multiple tasks on slurm
