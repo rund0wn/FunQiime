@@ -1,0 +1,10 @@
+qiime vsearch merge-pairs \
+        --i-demultiplexed-seqs ${1}  \
+        --o-merged-sequences ${2} \
+        --verbose
+qiime demux summarize \
+        --i-data ${2} \
+        --o-visualization ${2}.qzv
+        
+${1} imported_seq_output.qza
+${2} output.qza
